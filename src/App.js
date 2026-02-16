@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import LandingPage from './pages/LandingPage.jsx'
-import ThankYouPage from './pages/ThankYouPage.jsx'
+import LandingPage from './pages/LandingPage.js'
+import ThankYouPage from './pages/ThankYouPage.js'
 
 function App() {
   return (

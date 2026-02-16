@@ -5,14 +5,12 @@ function ThankYouPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-violet-50 via-white to-purple-50 flex items-center justify-center px-4 py-12">
       <div className="max-w-lg w-full text-center">
-        {/* Success Icon */}
         <div className="mb-8">
           <div className="w-24 h-24 bg-gradient-to-br from-violet-500 to-purple-600 rounded-full flex items-center justify-center mx-auto shadow-xl shadow-violet-200">
             <CheckCircle className="w-12 h-12 text-white" />
           </div>
         </div>
 
-        {/* Main Content */}
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
           Thank You!
         </h1>
@@ -23,7 +21,6 @@ function ThankYouPage() {
           Our team will contact you within 24 hours to help you find your perfect home.
         </p>
 
-        {/* What Happens Next */}
         <div className="bg-white rounded-2xl shadow-lg p-6 mb-8 text-left">
           <h2 className="text-lg font-semibold text-gray-900 mb-4">What happens next?</h2>
           <div className="space-y-4">
@@ -57,7 +54,6 @@ function ThankYouPage() {
           </div>
         </div>
 
-        {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             to="/"
@@ -75,7 +71,6 @@ function ThankYouPage() {
           </a>
         </div>
 
-        {/* Contact Info */}
         <p className="mt-8 text-gray-500">
           Need immediate assistance?{' '}
           <a href="tel:+919876543210" className="text-violet-600 font-medium hover:underline">
