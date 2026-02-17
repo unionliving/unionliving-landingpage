@@ -66,7 +66,15 @@ function HeroSection() {
   ]
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-violet-900 via-purple-900 to-indigo-900 overflow-hidden">
+    <section
+      className="relative min-h-screen  overflow-hidden"
+      style={{
+        backgroundImage: 'url(/assets/bg-1.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-violet-400 rounded-full blur-3xl"></div>
@@ -77,10 +85,10 @@ function HeroSection() {
           <div className="text-white">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
               <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-              <span className="text-sm font-medium">Rated 4.9/5 by 10,000+ students</span>
+              <span className="text-sm text-black font-medium">Rated 4.9/5 by 10,000+ students</span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl text-black font-bold leading-tight mb-6">
               Find Your Perfect{' '}
               <span className="bg-gradient-to-r from-violet-300 to-purple-300 bg-clip-text text-transparent">
                 Student Home
@@ -88,31 +96,31 @@ function HeroSection() {
               Near Your College
             </h1>
 
-            <p className="text-lg md:text-xl text-violet-100 mb-8 max-w-xl">
+            <p className="text-lg md:text-xl text-black mb-8 max-w-xl">
               Premium PG accommodations with modern amenities, prime locations, and a vibrant community. Start your journey today!
             </p>
 
             <div className="flex flex-wrap gap-4 mb-8">
               {trustBullets.map((bullet, index) => (
                 <div key={index} className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
-                  <bullet.icon className="w-5 h-5 text-violet-300" />
-                  <span className="text-sm font-medium">{bullet.text}</span>
+                  <bullet.icon className="w-5 h-5 text-violet-600" />
+                  <span className="text-sm text-black font-medium">{bullet.text}</span>
                 </div>
               ))}
             </div>
 
             <div className="grid grid-cols-3 gap-6 pt-8 border-t border-white/10">
               <div>
-                <div className="text-3xl md:text-4xl font-bold text-white">50+</div>
-                <div className="text-sm text-violet-200">Properties</div>
+                <div className="text-3xl md:text-4xl font-bold text-black">50+</div>
+                <div className="text-sm text-violet-400">Properties</div>
               </div>
               <div>
-                <div className="text-3xl md:text-4xl font-bold text-white">10K+</div>
-                <div className="text-sm text-violet-200">Happy Students</div>
+                <div className="text-3xl md:text-4xl font-bold text-black">10K+</div>
+                <div className="text-sm text-violet-400">Happy Students</div>
               </div>
               <div>
-                <div className="text-3xl md:text-4xl font-bold text-white">15+</div>
-                <div className="text-sm text-violet-200">Cities</div>
+                <div className="text-3xl md:text-4xl font-bold text-black">15+</div>
+                <div className="text-sm text-violet-400">Cities</div>
               </div>
             </div>
           </div>
