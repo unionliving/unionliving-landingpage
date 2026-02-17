@@ -84,7 +84,7 @@ export const propertyListData = [
         name:"House of KP",
         alt:"House of KP",
         coverImage:HouseofKPCover,
-        link:"/property/house-of-kp-koregoan-park",
+        link:"https://www.unionliving.in/property/house-of-kp-koregoan-park",
         propertyDescriptionTitle:"https://www.unionliving.in/#/form",
         images:[
             ChapterOneMainImage,ChapterOneOneImage,ChapterOneTwoImage,ChapterOneThreeImage,ChapterOneFourImage
@@ -678,7 +678,7 @@ export const activeProduct = [
         name:"House of KP",
         alt:"House of KP",
         coverImage:HouseofKPCover,
-        link:"/property/house-of-kp-koregoan-park",
+        link:"https://www.unionliving.in/property/house-of-kp-koregoan-park",
         propertyDescriptionTitle:"https://www.unionliving.in/#/form",
         images:[
             ChapterOneMainImage,ChapterOneOneImage,ChapterOneTwoImage,ChapterOneThreeImage,ChapterOneFourImage
@@ -712,7 +712,7 @@ export const activeProduct = [
         name:"Nova",
         alt:"Nova",
         coverImage:NovaCoverImage,
-        link:"/property/nova-coliving-gurugram",
+        link:"https://www.unionliving.in/property/nova-coliving-gurugram",
         propertyDescriptionTitle:"https://www.unionliving.in/#/form",
         images:[
             ChapterOneMainImage,ChapterOneOneImage,ChapterOneTwoImage,ChapterOneThreeImage,ChapterOneFourImage
@@ -750,7 +750,7 @@ export const activeProduct = [
         ],
         price:"Rs. 40,999",
         location:"Mahalaxmi",
-        link:"/property/southside-coliving-mahalaxmi",
+        link:"https://www.unionliving.in/property/southside-coliving-mahalaxmi",
         subtTitleDetail:"",
         titleDetail:"",
         contentDetail:"",
@@ -852,7 +852,7 @@ export const activeProduct = [
         map:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15079.663821938235!2d72.8389376!3d19.1113426!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c93fc7fa60af%3A0x71920bbde6e70ed6!2sTerra%20by%20Union%20Living!5e0!3m2!1sen!2sin!4v1717177015017!5m2!1sen!2sin",
         youtubeId:"6sp1mbovvYY",
         youtubeURL:"https://www.youtube.com/shorts/6sp1mbovvYY",
-        link:"/property/terra-coliving-juhu",
+        link:"https://www.unionliving.in/property/terra-coliving-juhu",
         brochure:"https://firebasestorage.googleapis.com/v0/b/union-living.appspot.com/o/files%2FTerra%20by%20Union%20Digital.pdf?alt=media&token=648c8804-cddf-4b51-a5fc-f635cb68a211",
         rooms:[
             {
@@ -927,7 +927,7 @@ export const activeProduct = [
         subtTitleDetail:"",
         titleDetail:"",
         contentDetail:"",
-        link:"/property/varsity-coliving-juhu-santacruz",
+        link:"https://www.unionliving.in/property/varsity-coliving-juhu-santacruz",
         propertyDescriptionTitle:"https://form.jotform.com/240653157769062",
         images:[
             VarsityMainImage,VarsityOneImage,VarsityTwoImage,VarsityThreeImage,VarsityFourImage
@@ -998,7 +998,7 @@ export const activeProduct = [
         alt:"Hamlet Baner, Pune",
         coverImage:HamletCoverImage,
         propertyDescriptionTitle:"https://www.unionliving.in/#/form",
-        link:"/property/hamlet-coliving-baner-pune",
+        link:"https://www.unionliving.in/property/hamlet-coliving-baner-pune",
         price:"Rs. 24,000",
         images:[
             HamletMainImage,HamletOneImage,HamletTwoImage,HamletThreeImage,HamletFourImage,HamletFiveImage,HamletSixImage
@@ -1025,7 +1025,7 @@ export const activeProduct = [
         name:"House of Balewadi",
         alt:"House of Balewadi",
         coverImage:HouseofBalewadiCover,
-        link:"/property/house-of-balewadi-coliving/",
+        link:"https://www.unionliving.in/property/house-of-balewadi-coliving/",
         propertyDescriptionTitle:"https://www.unionliving.in/#/form",
         images:[
             ChapterOneMainImage,ChapterOneOneImage,ChapterOneTwoImage,ChapterOneThreeImage,ChapterOneFourImage
@@ -1060,7 +1060,7 @@ export const activeProduct = [
         name:"Zest",
         alt:"Zest Chembur",
         coverImage:ZynergyImage,
-        link:"/property/zest-coliving-chembur",
+        link:"https://www.unionliving.in/property/zest-coliving-chembur",
         propertyDescriptionTitle:"https://www.unionliving.in/#/form",
         images:[
             ChapterOneMainImage,ChapterOneOneImage,ChapterOneTwoImage,ChapterOneThreeImage,ChapterOneFourImage
@@ -1095,7 +1095,7 @@ export const activeProduct = [
         name:"Abode",
         alt:"Abode Dhankawadi, Pune",
         coverImage:AbodeCoverImage,
-        link:"/property/abode-coliving-dhankawadi-pune",
+        link:"https://www.unionliving.in/property/abode-coliving-dhankawadi-pune",
         propertyDescriptionTitle:"https://www.unionliving.in/#/form",
         price:"Rs. 7,500",
         images:[
@@ -1129,7 +1129,7 @@ export const activeProduct = [
         name:"X90",
         alt:"X90",
         coverImage:X90CoverImage,
-        link:"/x90-coliving-baner-pune",
+        link:"https://www.unionliving.in/x90-coliving-baner-pune",
         propertyDescriptionTitle:"https://www.unionliving.in/#/form",
         images:[
             ChapterOneMainImage,ChapterOneOneImage,ChapterOneTwoImage,ChapterOneThreeImage,ChapterOneFourImage
@@ -1162,7 +1162,7 @@ export const activeProduct = [
         name:"House of Mundwa",
         alt:"House of Mundwa",
         coverImage:HouseofMundwaCover,
-        link:"",
+        link:"https://www.unionliving.in/property",
         propertyDescriptionTitle:"https://www.unionliving.in/#/form",
         images:[
             ChapterOneMainImage,ChapterOneOneImage,ChapterOneTwoImage,ChapterOneThreeImage,ChapterOneFourImage
@@ -1195,7 +1195,7 @@ export const activeProduct = [
         name:"Elv-8",
         alt:"Elv-8",
         coverImage:Elv8Cover,
-        link:"",
+        link:"https://www.unionliving.in/property",
         propertyDescriptionTitle:"https://www.unionliving.in/#/form",
         images:[
             ChapterOneMainImage,ChapterOneOneImage,ChapterOneTwoImage,ChapterOneThreeImage,ChapterOneFourImage
