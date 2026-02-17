@@ -73,22 +73,22 @@ function EnquiryModal() {
   if (!open) return null
 
   return (
-    <div className="fixed inset-0 z-[60]">
-      <div onClick={() => setOpen(false)} className="absolute inset-0 bg-black/30 backdrop-blur-sm" />
-      <div className="absolute left-1/2 top-1/2 w-[95vw] max-w-xl -translate-x-1/2 -translate-y-1/2">
-        <div className="bg-white rounded-2xl shadow-2xl p-6 md:p-8 relative">
-          <button onClick={() => setOpen(false)} className="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+    <div className="fixed inset-0 z-[60]" role="dialog" aria-modal="true">
+      <div onClick={() => setOpen(false)} className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
+      <div className="absolute inset-0 flex items-end md:items-center justify-center p-3 md:p-4 overscroll-contain">
+        <div className="w-full max-w-md md:max-w-xl bg-white rounded-2xl shadow-2xl p-5 md:p-8 relative max-h-[88vh] overflow-y-auto">
+          <button onClick={() => setOpen(false)} className="absolute top-3 right-3 text-gray-500 hover:text-gray-700">
             <X className="w-5 h-5" />
           </button>
 
-          <div className="text-center mb-6">
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">Get Free Consultation</h2>
-            <p className="text-gray-500">Fill the form and our expert will call you within 2 hours</p>
+          <div className="text-center mb-5 md:mb-6">
+            <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-1 md:mb-2">Get Free Consultation</h2>
+            <p className="text-gray-500 text-sm">Fill the form and our expert will call you within 2 hours</p>
           </div>
 
           {!submitted ? (
             <>
-              <div className="flex flex-wrap gap-2 mb-6">
+              <div className="flex flex-wrap gap-2 mb-5 md:mb-6">
                 {trustBullets.map((bullet, i) => (
                   <div key={i} className="flex items-center gap-2 bg-gray-50 px-3 py-2 rounded-lg">
                     <bullet.icon className="w-4 h-4 text-[#FC7451]" />
@@ -97,7 +97,7 @@ function EnquiryModal() {
                 ))}
               </div>
 
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-3 md:space-y-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Full Name *</label>
                   <input
@@ -107,11 +107,11 @@ function EnquiryModal() {
                     onChange={handleChange}
                     placeholder="Enter your full name"
                     required
-                    className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-violet-500 focus:border-transparent outline-none transition-all"
+                    className="w-full px-3 md:px-4 py-2.5 md:py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-violet-500 focus:border-transparent outline-none transition-all"
                   />
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-4">
+                <div className="grid md:grid-cols-2 gap-3 md:gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">Phone Number *</label>
                     <input
@@ -121,7 +121,7 @@ function EnquiryModal() {
                       onChange={handleChange}
                       placeholder="+91 98765 43210"
                       required
-                      className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-violet-500 focus:border-transparent outline-none transition-all"
+                      className="w-full px-3 md:px-4 py-2.5 md:py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-violet-500 focus:border-transparent outline-none transition-all"
                     />
                   </div>
                   <div>
@@ -133,7 +133,7 @@ function EnquiryModal() {
                       onChange={handleChange}
                       placeholder="your@email.com"
                       required
-                      className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-violet-500 focus:border-transparent outline-none transition-all"
+                      className="w-full px-3 md:px-4 py-2.5 md:py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-violet-500 focus:border-transparent outline-none transition-all"
                     />
                   </div>
                 </div>
@@ -145,7 +145,7 @@ function EnquiryModal() {
                     value={formData.college}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-violet-500 focus:border-transparent outline-none transition-all bg-white"
+                    className="w-full px-3 md:px-4 py-2.5 md:py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-violet-500 focus:border-transparent outline-none transition-all bg-white"
                   >
                     {colleges.map((college, index) => (
                       <option key={index} value={index === 0 ? '' : college}>
@@ -155,7 +155,7 @@ function EnquiryModal() {
                   </select>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-4">
+                <div className="grid md:grid-cols-2 gap-3 md:gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">Preferred Location *</label>
                     <select
@@ -163,7 +163,7 @@ function EnquiryModal() {
                       value={formData.location}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-violet-500 focus:border-transparent outline-none transition-all bg-white"
+                      className="w-full px-3 md:px-4 py-2.5 md:py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-violet-500 focus:border-transparent outline-none transition-all bg-white"
                     >
                       {locations.map((location, index) => (
                         <option key={index} value={index === 0 ? '' : location}>
@@ -179,7 +179,7 @@ function EnquiryModal() {
                       value={formData.budget}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-violet-500 focus:border-transparent outline-none transition-all bg-white"
+                      className="w-full px-3 md:px-4 py-2.5 md:py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-violet-500 focus:border-transparent outline-none transition-all bg-white"
                     >
                       {budgets.map((budget, index) => (
                         <option key={index} value={index === 0 ? '' : budget}>
@@ -193,7 +193,7 @@ function EnquiryModal() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-4 bg-[#D64C27] text-white font-semibold rounded-xl transition-all duration-300 shadow-lg disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  className="w-full py-3 md:py-4 bg-[#D64C27] text-white font-semibold rounded-xl transition-all duration-300 shadow-lg disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
                   {isSubmitting ? (
                     <>
