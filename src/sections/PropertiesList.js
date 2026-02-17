@@ -2,6 +2,7 @@ import React, { Suspense } from 'react'
 import PropertiesCardNew from '../Properties/PropertiesCardNew'
 import { activeProduct } from '../data/PropertyList.js'
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
 // Import Swiper styles
 import "swiper/css";
 import 'swiper/css/effect-coverflow';
@@ -10,7 +11,7 @@ import 'swiper/css/navigation';
 import PropertyLoadingCard from '../Properties/PropertyLoadingCard';
 const PropertiesList = () => {
   return (
-    <div className='lg:mx-6 mx-0 px-6 lg:pt-12 lg:pb-12  '>
+    <div className='container max-w-8xl mx-auto px-4 py-12 lg:py-20'>
          <h3 className='font-[NeueBold] text-[1.4rem] lg:text-[2.8rem]' >Our Properties</h3>
               <Swiper
           spaceBetween={30}
@@ -43,7 +44,13 @@ const PropertiesList = () => {
           slidesPerView:3
         }
       }}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
           loop={true}
+          modules={[Autoplay]}
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
         >

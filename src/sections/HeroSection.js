@@ -80,7 +80,7 @@ function HeroSection() {
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-violet-400 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="relative z-10 container mx-auto px-4 py-12 lg:py-20">
+      <div className="relative z-10 container max-w-8xl mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-6rem)]">
           <div className="text-white">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
