@@ -42,7 +42,7 @@ function StickyButton() {
           </div>
         )}
 
-        <button onClick={scrollToForm} className="group flex items-center gap-3 bg-gradient-to-r from-violet-600 to-purple-600 text-white px-6 py-4 rounded-full shadow-2xl shadow-violet-300 hover:shadow-violet-400 hover:scale-105 transition-all duration-300">
+        <button onClick={scrollToForm} className="group flex items-center gap-3 bg-[#FC7451] text-white px-6 py-4 rounded-full shadow-2xl hover:scale-105 transition-all duration-300">
           <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
             <MessageCircle className="w-5 h-5" />
           </div>
