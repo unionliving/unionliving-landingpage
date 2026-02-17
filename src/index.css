@@ -2,6 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "NeueRegular";
+  src: local("NeueRegular"), url("../webfonts/NeueHaasDisplayRoman.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NeueMedium";
+  src: local("NeueMedium"), url("../webfonts/NeueHaasDisplayMediu.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NeueBold";
+  src: local("NeueBold"), url("../webfonts/NeueHaasDisplayBold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NeueBlack";
+  src: local("NeueBlack"), url("../webfonts/NeueHaasDisplayBlack.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -73,9 +101,9 @@
     @apply bg-background text-foreground font-sans;
   }
   h1, h2, h3, h4, h5, h6 {
-    font-family: Neuemedium, NeueRegular, ;
+    font-family: NeueMedium, NeueRegular;
   }
   .font-semibold, .font-bold {
-    font-family: Neuemedium, NeueRegular,;
+    font-family: NeueMedium, NeueRegular;
   }
 }
