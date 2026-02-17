@@ -81,9 +81,9 @@ function PropertiesGrid() {
                     <span>{property.occupants} Person</span>
                   </div>
                 </div>
-                <a href="#enquiry-form" className="block w-full py-3 bg-violet-600 text-white text-center font-semibold rounded-xl hover:bg-violet-700 transition-colors">
+                <button onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal'))} className="w-full py-3 bg-[#D64C27] hover:bg-[#c44422] text-white text-center font-semibold rounded-xl transition-colors">
                   Enquire Now
-                </a>
+                </button>
               </div>
             </div>
           ))}

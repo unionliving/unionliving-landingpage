@@ -27,9 +27,9 @@ function ReviewsReel() {
   }
 
   return (
-    <section className="py-10 md:py-20 bg-white">
+    <section className="py-10 md:py-16 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4 md:mb-6">Reviews</h2>
+        <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-6">Reviews</h2>
         <Swiper
           spaceBetween={12}
           slidesPerView={1.1}

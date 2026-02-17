@@ -11,7 +11,7 @@ import 'swiper/css/navigation';
 import PropertyLoadingCard from '../Properties/PropertyLoadingCard';
 const PropertiesList = () => {
   return (
-    <div className='container max-w-8xl mx-auto px-4 py-12 lg:py-20'>
+    <div id='properties' className='container max-w-8xl mx-auto px-4 py-12 lg:py-20'>
          <h3 className='font-[NeueBold] text-[1.4rem] lg:text-[2.8rem]' >Our Properties</h3>
               <Swiper
           spaceBetween={30}

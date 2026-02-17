@@ -11,6 +11,7 @@ import PropertiesList from '../sections/PropertiesList.js'
 import CommunitySection from '../sections/CommunitySection.js'
 import Navbar from '../sections/Navbar.js'
 import Footer from '../sections/Footer.js'
+import EnquiryModal from '../components/EnquiryModal.js'
 
 function LandingPage() {
   return (
@@ -25,6 +26,7 @@ function LandingPage() {
       <CommunitySection />
       {/* <EventsGrid /> */}
       <ReviewsReel />
+      <EnquiryModal />
       <StickyButton />
       <Footer />
     </div>

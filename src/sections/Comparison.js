@@ -23,27 +23,48 @@ function Comparison() {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 mb-4 md:mb-6">
+          <div className="hidden md:grid md:grid-cols-3 gap-3 md:gap-4 mb-4 md:mb-6">
             <div className="text-left md:text-left"><span className="text-gray-500 font-medium">Features</span></div>
-            <div className="text-center bg-[#FC7451] rounded-xl py-3 md:py-4 px-4 md:px-6"><span className="text-white font-bold text-base md:text-lg">Union Living</span></div>
+            <div className="text-center bg-[#D64C27] rounded-xl py-3 md:py-4 px-4 md:px-6"><span className="text-white font-bold text-base md:text-lg">Union Living</span></div>
             <div className="text-center bg-gray-100 rounded-xl py-3 md:py-4 px-4 md:px-6"><span className="text-gray-700 font-bold text-base md:text-lg">Traditional PG</span></div>
           </div>
 
-          <div className="space-y-3 md:space-y-4">
-            {comparisons.map((item, index) => (
-              <div key={index} className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 items-center bg-gray-50 rounded-xl p-3 md:p-4 hover:bg-violet-50 transition-colors">
-                <div className="text-center md:text-left">
-                  <h4 className="font-semibold text-gray-900 text-sm md:text-base">{item.feature}</h4>
-                  <p className="text-xs md:text-sm text-gray-500 hidden md:block">{item.description}</p>
-                </div>
-                <div className="flex justify-center">
-                  <div className={`w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center ${item.unionLiving ? 'bg-green-100' : 'bg-red-100'}`}>
-                    {item.unionLiving ? <Check className="w-4 h-4 md:w-5 md:h-5 text-green-600" /> : <X className="w-4 h-4 md:w-5 md:h-5 text-red-500" />}
+          <div className="hidden md:block">
+            <div className="space-y-3 md:space-y-4">
+              {comparisons.map((item, index) => (
+                <div key={index} className="grid grid-cols-3 gap-4 items-center bg-gray-50 rounded-xl p-4 hover:bg-violet-50 transition-colors">
+                  <div className="text-left">
+                    <h4 className="font-semibold text-gray-900 text-base">{item.feature}</h4>
+                    <p className="text-sm text-gray-500">{item.description}</p>
+                  </div>
+                  <div className="flex justify-center">
+                    <div className={`w-10 h-10 rounded-full flex items-center justify-center ${item.unionLiving ? 'bg-green-100' : 'bg-red-100'}`}>
+                      {item.unionLiving ? <Check className="w-5 h-5 text-green-600" /> : <X className="w-5 h-5 text-red-500" />}
+                    </div>
+                  </div>
+                  <div className="flex justify-center">
+                    <div className={`w-10 h-10 rounded-full flex items-center justify-center ${item.traditionalPG ? 'bg-green-100' : 'bg-red-100'}`}>
+                      {item.traditionalPG ? <Check className="w-5 h-5 text-green-600" /> : <X className="w-5 h-5 text-red-500" />}
+                    </div>
                   </div>
                 </div>
-                <div className="flex justify-center">
-                  <div className={`w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center ${item.traditionalPG ? 'bg-green-100' : 'bg-red-100'}`}>
-                    {item.traditionalPG ? <Check className="w-4 h-4 md:w-5 md:h-5 text-green-600" /> : <X className="w-4 h-4 md:w-5 md:h-5 text-red-500" />}
+              ))}
+            </div>
+          </div>
+
+          <div className="md:hidden space-y-3">
+            {comparisons.map((item, index) => (
+              <div key={index} className="bg-gray-50 rounded-xl p-3 hover:bg-violet-50 transition-colors">
+                <h4 className="font-semibold text-gray-900 text-sm">{item.feature}</h4>
+                <p className="text-xs text-gray-500 mt-1">{item.description}</p>
+                <div className="grid grid-cols-2 gap-2 mt-3">
+                  <div className={`flex items-center gap-2 rounded-lg px-2 py-2 ${item.unionLiving ? 'bg-green-50 text-green-700' : 'bg-red-50 text-red-700'}`}>
+                    {item.unionLiving ? <Check className="w-4 h-4" /> : <X className="w-4 h-4" />}
+                    <span className="text-[11px] font-medium">Union Living</span>
+                  </div>
+                  <div className={`flex items-center gap-2 rounded-lg px-2 py-2 ${item.traditionalPG ? 'bg-green-50 text-green-700' : 'bg-red-50 text-red-700'}`}>
+                    {item.traditionalPG ? <Check className="w-4 h-4" /> : <X className="w-4 h-4" />}
+                    <span className="text-[11px] font-medium">Traditional PG</span>
                   </div>
                 </div>
               </div>

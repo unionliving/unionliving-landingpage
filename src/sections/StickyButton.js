@@ -21,10 +21,7 @@ function StickyButton() {
   }, [])
 
   const scrollToForm = () => {
-    const formElement = document.getElementById('enquiry-form')
-    if (formElement) {
-      formElement.scrollIntoView({ behavior: 'smooth' })
-    }
+    window.dispatchEvent(new CustomEvent('open-enquiry-modal'))
   }
 
   return (
@@ -42,22 +39,14 @@ function StickyButton() {
           </div>
         )}
 
-        <button onClick={scrollToForm} className="group flex items-center gap-3 bg-[#FC7451] text-white px-6 py-4 rounded-full shadow-2xl hover:scale-105 transition-all duration-300">
-          <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-            <MessageCircle className="w-5 h-5" />
-          </div>
-          <span className="font-semibold pr-2">Enquire Now</span>
-        </button>
-      </div>
-
-      <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 z-40 md:hidden">
-        <button onClick={scrollToForm} className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-violet-600 to-purple-600 text-white font-semibold py-3 rounded-xl">
+        <button onClick={scrollToForm} className="flex items-center gap-2 bg-[#D64C27] text-white px-5 py-3 rounded-lg transition-colors hover:bg-[#c44422]">
           <MessageCircle className="w-5 h-5" />
-          Enquire Now - Free Consultation
+          <span className="font-semibold">Enquire</span>
         </button>
       </div>
 
-      <div className="h-20 md:hidden"></div>
+      
+
     </>
   )
 }
