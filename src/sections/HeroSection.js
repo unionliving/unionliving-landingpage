@@ -90,7 +90,7 @@ function HeroSection() {
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl text-black font-bold leading-tight mb-6">
               Find Your Perfect{' '}
-              <span className="bg-gradient-to-r from-violet-300 to-purple-300 bg-clip-text text-transparent">
+              <span className="bg-[#FC7451] bg-clip-text text-transparent">
                 Student Home
               </span>{' '}
               Near Your College
@@ -103,7 +103,7 @@ function HeroSection() {
             <div className="flex flex-wrap gap-4 mb-8">
               {trustBullets.map((bullet, index) => (
                 <div key={index} className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
-                  <bullet.icon className="w-5 h-5 text-violet-600" />
+                  <bullet.icon className="w-5 h-5 text-[#FC7451]" />
                   <span className="text-sm text-black font-medium">{bullet.text}</span>
                 </div>
               ))}
@@ -112,15 +112,15 @@ function HeroSection() {
             <div className="grid grid-cols-3 gap-6 pt-8 border-t border-white/10">
               <div>
                 <div className="text-3xl md:text-4xl font-bold text-black">50+</div>
-                <div className="text-sm text-violet-400">Properties</div>
+                <div className="text-sm text-[#FC7451]">Properties</div>
               </div>
               <div>
                 <div className="text-3xl md:text-4xl font-bold text-black">10K+</div>
-                <div className="text-sm text-violet-400">Happy Students</div>
+                <div className="text-sm text-[#FC7451]">Happy Students</div>
               </div>
               <div>
                 <div className="text-3xl md:text-4xl font-bold text-black">15+</div>
-                <div className="text-sm text-violet-400">Cities</div>
+                <div className="text-sm text-[#FC7451]">Cities</div>
               </div>
             </div>
           </div>
@@ -227,7 +227,7 @@ function HeroSection() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-4 bg-gradient-to-r from-violet-600 to-purple-600 text-white font-semibold rounded-xl hover:from-violet-700 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-violet-200 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                className="w-full py-4 bg-[#FC7451] text-white font-semibold rounded-xl hover:from-violet-700 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-violet-200 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
               >
                 {isSubmitting ? (
                   <>

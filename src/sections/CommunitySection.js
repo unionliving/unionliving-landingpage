@@ -8,14 +8,14 @@ function CommunitySection() {
           <div className="order-2 lg:order-none">
             <h2 className="text-2xl md:text-5xl font-bold leading-tight text-gray-900">
               Join & vibe with a vibrant and{' '}
-              <span className="text-sky-500">colourful community</span>.
+              <span className="text-[#FC7451]">colourful community</span>.
             </h2>
             <p className="mt-3 md:mt-4 text-gray-600 max-w-xl text-sm md:text-base">
               Experience co-living like never before in our uniquely designed spaces. Create your community, engage in social activities, connect with others, and gain valuable mentorship on your terms.
             </p>
-            <a href="/community" className="mt-6 inline-flex items-center gap-2 text-sky-600 font-semibold">
+            <a href="/community" className="mt-6 inline-flex items-center gap-2 text-[#FC7451] font-semibold">
               Know More
-              <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-sky-500 text-white">
+              <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#FC7451] text-white">
                 <Plus className="w-4 h-4" />
               </span>
             </a>
