@@ -4,7 +4,11 @@ import { MessageCircle } from 'lucide-react'
 function Navbar() {
   const scrollTo = (id) => {
     const el = document.getElementById(id)
-    if (el) el.scrollIntoView({ behavior: 'smooth' })
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' })
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
   }
   return (
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b">
@@ -13,7 +17,7 @@ function Navbar() {
           <img src="/assets/logoblack.webp" alt="Union Living" className="h-7 md:h-10 w-auto" />
         </Link>
         <nav className="hidden md:flex items-center gap-6">
-          <button onClick={() => scrollTo('hero')} className="text-gray-700 hover:text-gray-900">Home</button>
+          <button onClick={() => scrollTo('hero-video')} className="text-gray-700 hover:text-gray-900">Home</button>
           <button onClick={() => scrollTo('properties')} className="text-gray-700 hover:text-gray-900">Properties</button>
           <button onClick={() => scrollTo('community')} className="text-gray-700 hover:text-gray-900">Community</button>
         </nav>
