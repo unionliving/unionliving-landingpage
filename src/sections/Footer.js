@@ -7,9 +7,9 @@ const Footer = () => {
   return (
     <div id='contact' className='container max-w-8xl mx-auto px-4 pt-12 lg:pt-16'>
       <div className='bg-[#ebe3d654] rounded-2xl p-6 md:p-10 shadow-lg'>
-        <div className='grid md:grid-cols-4 gap-6 text-center md:text-left'>
+        <div className='grid md:grid-cols-4 gap-6 text-left'>
           <div >
-            <img className='w-[140px] md:w-[160px] justify-self-center md:justify-self-start' src="/assets/logoblack.webp" alt="Union Living" />
+            <img className='w-[140px] md:w-[160px] ' src="/assets/logoblack.webp" alt="Union Living" />
             <p className='font-[NeueRegular] text-sm md:text-base text-[#272727] mt-2'>Live Easy, Live United</p>
             <button
               onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry-modal'))}
