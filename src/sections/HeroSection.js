@@ -89,7 +89,7 @@ function HeroSection() {
             </h1>
 
             <p className="text-lg md:text-xl text-black mb-8 max-w-xl">
-              Premium PG accommodations with modern amenities, prime locations, and a vibrant community. Start your journey today!
+              Premium Co-living accommodations with modern amenities, prime locations, and a vibrant community. Start your journey today!
             </p>
 
             <div className="flex flex-wrap gap-4 mb-8">

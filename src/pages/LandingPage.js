@@ -12,13 +12,15 @@ import CommunitySection from '../sections/CommunitySection.js'
 import Navbar from '../sections/Navbar.js'
 import Footer from '../sections/Footer.js'
 import EnquiryModal from '../components/EnquiryModal.js'
+import VideoConsultation from '../sections/VideoConsultation.js'
 
 function LandingPage() {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
-      <HeroSection />
-      <VideoBanner />
+      {/* <HeroSection /> */}
+      {/* <VideoBanner /> */}
+      <VideoConsultation />
       <PropertiesList />
       {/* <PropertiesGrid /> */}
       {/* <Testimonials /> */}
