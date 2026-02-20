@@ -89,7 +89,7 @@ export const propertyListData = [
         images:[
             ChapterOneMainImage,ChapterOneOneImage,ChapterOneTwoImage,ChapterOneThreeImage,ChapterOneFourImage
         ],
-        price:"28,000",
+        price:"Rs. 28,000",
         location:"Koregaon Park, Pune",
         content:"Get ready for a fresh, innovative take on community living. House of KP is an upcoming union living property in the vibrant heart of Koregaon Park, designed for those who want more than just a place to stay – it’s a place to connect, collaborate, and thrive.",
         map:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15077.883075003392!2d72.8629156!3d19.1308596!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2c8a38409d307a53!2sCASA%20by%20Union%20Co-Living!5e0!3m2!1sen!2sin!4v1673692237980!5m2!1sen!2sin",
@@ -440,7 +440,7 @@ export const propertyListData = [
         images:[
             ChapterOneMainImage,ChapterOneOneImage,ChapterOneTwoImage,ChapterOneThreeImage,ChapterOneFourImage
         ],
-        price:"20,000",
+        price:"Rs. 20,000",
         location:"Balewadi",
         content:"A dynamic coliving space blending community, innovation, and comfort with shared amenities and modern workspaces.",
         map:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15077.883075003392!2d72.8629156!3d19.1308596!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2c8a38409d307a53!2sCASA%20by%20Union%20Co-Living!5e0!3m2!1sen!2sin!4v1673692237980!5m2!1sen!2sin",
@@ -475,7 +475,7 @@ export const propertyListData = [
         images:[
             ChapterOneMainImage,ChapterOneOneImage,ChapterOneTwoImage,ChapterOneThreeImage,ChapterOneFourImage
         ],
-        price:"20,000",
+        price:"Rs. 20,000",
         location:"Chembur",
         content:"Nestled in a vibrant neighborhood, this modern co-living space offers fully-furnished rooms, high-speed WiFi, and all-inclusive amenities—so you can focus on living your best life. ",
         map:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15077.883075003392!2d72.8629156!3d19.1308596!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2c8a38409d307a53!2sCASA%20by%20Union%20Co-Living!5e0!3m2!1sen!2sin!4v1673692237980!5m2!1sen!2sin",
@@ -683,7 +683,7 @@ export const activeProduct = [
         images:[
             ChapterOneMainImage,ChapterOneOneImage,ChapterOneTwoImage,ChapterOneThreeImage,ChapterOneFourImage
         ],
-        price:"28,000",
+        price:"Rs. 28,000",
         location:"Koregaon Park, Pune",
         content:"Get ready for a fresh, innovative take on community living. House of KP is an upcoming union living property in the vibrant heart of Koregaon Park, designed for those who want more than just a place to stay – it’s a place to connect, collaborate, and thrive.",
         map:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15077.883075003392!2d72.8629156!3d19.1308596!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2c8a38409d307a53!2sCASA%20by%20Union%20Co-Living!5e0!3m2!1sen!2sin!4v1673692237980!5m2!1sen!2sin",
@@ -1030,7 +1030,7 @@ export const activeProduct = [
         images:[
             ChapterOneMainImage,ChapterOneOneImage,ChapterOneTwoImage,ChapterOneThreeImage,ChapterOneFourImage
         ],
-        price:"20,000",
+        price:"Rs. 20,000",
         location:"Balewadi",
         content:"A dynamic coliving space blending community, innovation, and comfort with shared amenities and modern workspaces.",
         map:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15077.883075003392!2d72.8629156!3d19.1308596!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2c8a38409d307a53!2sCASA%20by%20Union%20Co-Living!5e0!3m2!1sen!2sin!4v1673692237980!5m2!1sen!2sin",
@@ -1065,7 +1065,7 @@ export const activeProduct = [
         images:[
             ChapterOneMainImage,ChapterOneOneImage,ChapterOneTwoImage,ChapterOneThreeImage,ChapterOneFourImage
         ],
-        price:"20,000",
+        price:"Rs. 20,000",
         location:"Chembur",
         content:"Nestled in a vibrant neighborhood, this modern co-living space offers fully-furnished rooms, high-speed WiFi, and all-inclusive amenities—so you can focus on living your best life. ",
         map:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15077.883075003392!2d72.8629156!3d19.1308596!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2c8a38409d307a53!2sCASA%20by%20Union%20Co-Living!5e0!3m2!1sen!2sin!4v1673692237980!5m2!1sen!2sin",
