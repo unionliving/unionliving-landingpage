@@ -11,6 +11,7 @@ import CommunitySection from '../sections/CommunitySection.js'
 import Navbar from '../sections/Navbar.js'
 import Footer from '../sections/Footer.js'
 import EnquiryModal from '../components/EnquiryModal.js'
+import ThankYouModal from '../components/ThankYouModal.js'
 import HeroSection from '../sections/HeroSection.js'
 import VideoBanner from '../sections/VideoBanner.js'
 
@@ -29,6 +30,7 @@ function LandingPage() {
       {/* <EventsGrid /> */}
       <ReviewsReel />
       <EnquiryModal />
+      <ThankYouModal />
       <StickyButton />
       <Footer />
     </div>

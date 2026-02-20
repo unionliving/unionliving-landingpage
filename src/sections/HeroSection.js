@@ -26,6 +26,9 @@ function HeroSection() {
     setTimeout(() => {
       setIsSubmitting(false)
       setSubmitted(true)
+      if (window.fbq) window.fbq('track', 'Form_Submit')
+      window.dispatchEvent(new CustomEvent('open-thankyou-modal'))
+      setSubmitted(false)
     }, 500)
   }
 
@@ -167,19 +170,15 @@ function HeroSection() {
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Your College/University *</label>
-                <select
+                <input
+                  type="text"
                   name="college"
                   value={formData.college}
                   onChange={handleChange}
+                  placeholder="Enter your college or university"
                   required
-                  className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-violet-500 focus:border-transparent outline-none transition-all bg-white"
-                >
-                  {colleges.map((college, index) => (
-                    <option key={index} value={index === 0 ? '' : college}>
-                      {college}
-                    </option>
-                  ))}
-                </select>
+                  className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-violet-500 focus:border-transparent outline-none transition-all"
+                />
               </div>
 
               <div className="grid md:grid-cols-2 gap-4">
