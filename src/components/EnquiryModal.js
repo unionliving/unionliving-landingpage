@@ -34,17 +34,73 @@ function EnquiryModal() {
     setFormData(prev => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
+
+    if (!/^\d{10}$/.test(formData.phone)) {
+      alert('Please enter a valid 10-digit phone number.')
+      return
+    }
+
     setIsSubmitting(true)
-    setTimeout(() => {
+
+    try {
+      // TODO: Replace with your actual LeadSquared API Access Key and Secret Key
+      // WARNING: Exposing Secret Key on the frontend is a security risk. Consider using a backend proxy.
+      const accessKey = 'u$r0346498d5d8a9d49fab725f28c83a03a'
+      const secretKey = 'bf008a0ca47aab2824e794e0e435193da2a473f2'
+      const apiUrl = `https://api-in21.leadsquared.com/v2/LeadManagement.svc/Lead.Capture?accessKey=${accessKey}&secretKey=${secretKey}`
+      const payload = [
+        { Attribute: 'FirstName', Value: formData.name },
+        { Attribute: 'Phone', Value: formData.phone },
+        { Attribute: 'EmailAddress', Value: formData.email },
+        { Attribute: 'mx_College_or_Company_Name', Value: formData.college },
+        { Attribute: 'mx_PreferredLocation', Value: formData.location },
+        { Attribute: 'mx_MonthlyBudget', Value: formData.budget },
+        { Attribute: 'Source', Value: 'website_form' },
+        { Attribute: 'SearchBy', Value: 'Phone' }
+      ]
+
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      })
+
+      const result = await response.json()
+
+      if (response.ok && result.Status === 'Success') {
+        if (result.Message) {
+          console.log('Lead Created/Updated:', {
+            Id: result.Message.Id,
+            RelatedId: result.Message.RelatedId,
+            IsCreated: result.Message.IsCreated
+          })
+        }
+        if (window.fbq) window.fbq('track', 'Form_Submit')
+        window.dispatchEvent(new CustomEvent('open-thankyou-modal'))
+        setOpen(false)
+        setSubmitted(false)
+        setFormData({
+          name: '',
+          phone: '',
+          email: '',
+          college: '',
+          location: '',
+          budget: ''
+        })
+      } else {
+        console.error('LeadSquared API Error:', result.ExceptionMessage || result)
+        alert('Submission failed: ' + (result.ExceptionMessage || 'Unknown error'))
+      }
+    } catch (error) {
+      console.error('Submission failed:', error)
+    } finally {
       setIsSubmitting(false)
-      setSubmitted(true)
-      if (window.fbq) window.fbq('track', 'Form_Submit')
-      window.dispatchEvent(new CustomEvent('open-thankyou-modal'))
-      setOpen(false)
-      setSubmitted(false)
-    }, 700)
+    }
   }
 
   const trustBullets = [
