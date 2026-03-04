@@ -16,16 +16,56 @@ function HeroVideoSection() {
     const { name, value } = e.target
     setFormData(prev => ({ ...prev, [name]: value }))
   }
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
+
+    if (!/^\d{10}$/.test(formData.phone)) {
+      alert('Please enter a valid 10-digit phone number.')
+      return
+    }
+
     setIsSubmitting(true)
-    setTimeout(() => {
+
+    try {
+      const accessKey = 'u$r0346498d5d8a9d49fab725f28c83a03a'
+      const secretKey = 'bf008a0ca47aab2824e794e0e435193da2a473f2'
+      const apiUrl = `https://api-in21.leadsquared.com/v2/LeadManagement.svc/Lead.CreateOrUpdate?postUpdatedLead=false&accessKey=${accessKey}&secretKey=${secretKey}`
+
+      const payload = [
+        { Attribute: 'FirstName', Value: formData.name },
+        { Attribute: 'Phone', Value: formData.phone },
+        { Attribute: 'EmailAddress', Value: formData.email },
+        { Attribute: 'mx_College_or_Company_Name', Value: formData.college },
+        { Attribute: 'mx_Preferred_Location', Value: formData.location },
+        { Attribute: 'mx_Monthly_Budget', Value: formData.budget },
+        { Attribute: 'source', Value: 'website_form' },
+        { Attribute: 'SearchBy', Value: 'Phone' }
+      ]
+
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      })
+
+      const result = await response.json()
+
+      if (response.ok) {
+        if (window.fbq) window.fbq('track', 'Form_Submit')
+        window.dispatchEvent(new CustomEvent('open-thankyou-modal'))
+        setFormData({ name: '', phone: '', email: '', college: '', location: '', budget: '' })
+      } else {
+        alert('Submission failed: ' + (result.ExceptionMessage || 'Unknown error'))
+      }
+    } catch (error) {
+      console.error('Submission failed:', error)
+      alert('Something went wrong. Please try again.')
+    } finally {
       setIsSubmitting(false)
-      setSubmitted(true)
-      if (window.fbq) window.fbq('track', 'Form_Submit')
-      window.dispatchEvent(new CustomEvent('open-thankyou-modal'))
-      setSubmitted(false)
-    }, 500)
+    }
   }
   const trustBullets = [
     { icon: Shield, text: 'Verified Properties' },
@@ -151,11 +191,12 @@ function HeroVideoSection() {
                       required
                       className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-violet-500 focus:border-transparent outline-none transition-all bg-white"
                     >
-                      {budgets.map((budget, index) => (
-                        <option key={index} value={index === 0 ? '' : budget}>
-                          {budget}
-                        </option>
-                      ))}
+                      <option value="">Select your budget</option>
+                      <option value="10000">Under ₹10,000</option>
+                      <option value="10000">₹10,000 - ₹15,000</option>
+                      <option value="15000">₹15,000 - ₹20,000</option>
+                      <option value="20000">₹20,000 - ₹25,000</option>
+                      <option value="25000">Above ₹25,000</option>
                     </select>
                   </div>
                 </div>

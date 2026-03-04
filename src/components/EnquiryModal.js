@@ -49,15 +49,15 @@ function EnquiryModal() {
       // WARNING: Exposing Secret Key on the frontend is a security risk. Consider using a backend proxy.
       const accessKey = 'u$r0346498d5d8a9d49fab725f28c83a03a'
       const secretKey = 'bf008a0ca47aab2824e794e0e435193da2a473f2'
-      const apiUrl = `https://api-in21.leadsquared.com/v2/LeadManagement.svc/Lead.Capture?accessKey=${accessKey}&secretKey=${secretKey}`
+      const apiUrl = `https://api-in21.leadsquared.com/v2/LeadManagement.svc/Lead.CreateOrUpdate?postUpdatedLead=false&accessKey=${accessKey}&secretKey=${secretKey}`
       const payload = [
         { Attribute: 'FirstName', Value: formData.name },
         { Attribute: 'Phone', Value: formData.phone },
         { Attribute: 'EmailAddress', Value: formData.email },
         { Attribute: 'mx_College_or_Company_Name', Value: formData.college },
-        { Attribute: 'mx_PreferredLocation', Value: formData.location },
-        { Attribute: 'mx_MonthlyBudget', Value: formData.budget },
-        { Attribute: 'Source', Value: 'website_form' },
+        { Attribute: 'mx_Preferred_Location', Value: formData.location },
+        { Attribute: 'mx_Monthly_Budget', Value: formData.budget },
+        { Attribute: 'source', Value: 'website_form' },
         { Attribute: 'SearchBy', Value: 'Phone' }
       ]
 
@@ -237,11 +237,12 @@ function EnquiryModal() {
                       required
                       className="w-full px-3 md:px-4 py-2.5 md:py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-violet-500 focus:border-transparent outline-none transition-all bg-white"
                     >
-                      {budgets.map((budget, index) => (
-                        <option key={index} value={index === 0 ? '' : budget}>
-                          {budget}
-                        </option>
-                      ))}
+                      <option value="">Select your budget</option>
+                      <option value="10000">Under ₹10,000</option>
+                      <option value="10000">₹10,000 - ₹15,000</option>
+                      <option value="15000">₹15,000 - ₹20,000</option>
+                      <option value="20000">₹20,000 - ₹25,000</option>
+                      <option value="25000">Above ₹25,000</option>
                     </select>
                   </div>
                 </div>
