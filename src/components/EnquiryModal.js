@@ -81,6 +81,11 @@ function EnquiryModal() {
           })
         }
         if (window.fbq) window.fbq('track', 'Form_Submit')
+        if (window.gtag) window.gtag('event', 'conversion', {
+          send_to: 'AW-11425120901/6RJQCPGuuvsbEIWF9scq',
+          value: 1.0,
+          currency: 'INR',
+        })
         window.dispatchEvent(new CustomEvent('open-thankyou-modal'))
         setOpen(false)
         setSubmitted(false)
