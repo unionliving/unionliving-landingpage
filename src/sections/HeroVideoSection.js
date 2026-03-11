@@ -27,8 +27,12 @@ function HeroVideoSection() {
     setIsSubmitting(true)
 
     try {
-      const accessKey = 'u$r0346498d5d8a9d49fab725f28c83a03a'
-      const secretKey = 'bf008a0ca47aab2824e794e0e435193da2a473f2'
+      const accessKey = import.meta.env.VITE_LEADSQUARED_ACCESS_KEY
+      const secretKey = import.meta.env.VITE_LEADSQUARED_SECRET_KEY
+      if (!accessKey || !secretKey) {
+        alert('Missing LeadSquared API keys. Please configure environment variables.')
+        return
+      }
       const apiUrl = `https://api-in21.leadsquared.com/v2/LeadManagement.svc/Lead.CreateOrUpdate?postUpdatedLead=false&accessKey=${accessKey}&secretKey=${secretKey}`
 
       const payload = [
