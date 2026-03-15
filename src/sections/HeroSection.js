@@ -36,7 +36,7 @@ function HeroSection() {
         alert('Missing LeadSquared API keys. Please configure environment variables.')
         return
       }
-      const apiUrl = `https://api-in21.leadsquared.com/v2/LeadManagement.svc/Lead.CreateOrUpdate?postUpdatedLead=false&accessKey=${accessKey}&secretKey=${secretKey}`
+      const apiUrl = `https://api-in21.leadsquared.com/v2/LeadManagement.svc/Lead.CreateOrUpdate?postUpdatedLead=false&accessKey=${encodeURIComponent(accessKey)}&secretKey=${encodeURIComponent(secretKey)}`
 
       const payload = [
         { Attribute: 'FirstName', Value: formData.name },
@@ -58,7 +58,13 @@ function HeroSection() {
         body: JSON.stringify(payload)
       })
 
-      const result = await response.json()
+      const rawBody = await response.text()
+      let result = null
+      try {
+        result = rawBody ? JSON.parse(rawBody) : null
+      } catch {
+        result = null
+      }
 
       if (response.ok) {
         if (window.fbq) window.fbq('track', 'Form_Submit')
@@ -70,7 +76,7 @@ function HeroSection() {
         window.dispatchEvent(new CustomEvent('open-thankyou-modal'))
         setFormData({ name: '', phone: '', email: '', college: '', location: '', budget: '' })
       } else {
-        alert('Submission failed: ' + (result.ExceptionMessage || 'Unknown error'))
+        alert('Submission failed: ' + (result?.ExceptionMessage || response.statusText || 'Unknown error'))
       }
     } catch (error) {
       console.error('Submission failed:', error)

@@ -51,7 +51,7 @@ function EnquiryModal() {
         alert('Missing LeadSquared API keys. Please configure environment variables.')
         return
       }
-      const apiUrl = `https://api-in21.leadsquared.com/v2/LeadManagement.svc/Lead.CreateOrUpdate?postUpdatedLead=false&accessKey=${accessKey}&secretKey=${secretKey}`
+      const apiUrl = `https://api-in21.leadsquared.com/v2/LeadManagement.svc/Lead.CreateOrUpdate?postUpdatedLead=false&accessKey=${encodeURIComponent(accessKey)}&secretKey=${encodeURIComponent(secretKey)}`
       const payload = [
         { Attribute: 'FirstName', Value: formData.name },
         { Attribute: 'Phone', Value: formData.phone },
@@ -72,10 +72,16 @@ function EnquiryModal() {
         body: JSON.stringify(payload)
       })
 
-      const result = await response.json()
+      const rawBody = await response.text()
+      let result = null
+      try {
+        result = rawBody ? JSON.parse(rawBody) : null
+      } catch {
+        result = null
+      }
 
-      if (response.ok && result.Status === 'Success') {
-        if (result.Message) {
+      if (response.ok && result?.Status === 'Success') {
+        if (result?.Message) {
           console.log('Lead Created/Updated:', {
             Id: result.Message.Id,
             RelatedId: result.Message.RelatedId,
@@ -100,8 +106,8 @@ function EnquiryModal() {
           budget: ''
         })
       } else {
-        console.error('LeadSquared API Error:', result.ExceptionMessage || result)
-        alert('Submission failed: ' + (result.ExceptionMessage || 'Unknown error'))
+        console.error('LeadSquared API Error:', result?.ExceptionMessage || result || rawBody)
+        alert('Submission failed: ' + (result?.ExceptionMessage || response.statusText || 'Unknown error'))
       }
     } catch (error) {
       console.error('Submission failed:', error)
