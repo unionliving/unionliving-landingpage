@@ -88,9 +88,9 @@ function EnquiryModal() {
             IsCreated: result.Message.IsCreated
           })
         }
-        if (window.fbq) window.fbq('track', 'Form_Submit')
+        if (window.fbq) window.fbq('trackCustom', 'Form_Submit')
         if (window.gtag) window.gtag('event', 'conversion', {
-          send_to: 'AW-11425120901/6RJQCPGuuvsbEIWF9scq',
+          send_to: 'AW-11425120901/9ZMYCIbzufsbEIWF9scq',
           value: 1.0,
           currency: 'INR',
         })
