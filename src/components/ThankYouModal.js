@@ -10,7 +10,7 @@ function ThankYouModal() {
   useEffect(() => {
     if (open && typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'conversion', {
-        send_to: 'AW-11425120901/6RJQCPGuuvsbEIWF9scq',
+        send_to: 'AW-11425120901/9ZMYCIbzufsbEIWF9scq',
         value: 1.0,
         currency: 'INR',
       })
