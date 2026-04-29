@@ -112,7 +112,7 @@ export const propertyListData = [
         images:[
             ChapterOneMainImage,ChapterOneOneImage,ChapterOneTwoImage,ChapterOneThreeImage,ChapterOneFourImage
         ],
-        price:"Rs. 25,000",
+        price:"Rs. 30,000",
         location:"Cyber City, Gurugram ",
         content:"Modern coliving with premium amenities, vibrant community, near Cyber City, perfectly located for work and life..",
         map:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15077.883075003392!2d72.8629156!3d19.1308596!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2c8a38409d307a53!2sCASA%20by%20Union%20Co-Living!5e0!3m2!1sen!2sin!4v1673692237980!5m2!1sen!2sin",
@@ -409,7 +409,7 @@ export const activeProduct = [
         link:"https://www.unionliving.in/property/nova-coliving-gurugram",
         propertyDescriptionTitle:"https://www.unionliving.in/#/form",
         images:[ChapterOneMainImage,ChapterOneOneImage,ChapterOneTwoImage,ChapterOneThreeImage,ChapterOneFourImage],
-        price:"Rs. 25,000",
+        price:"Rs. 30,000",
         location:"Cyber City, Gurugram",
         content:"Modern coliving with premium amenities, vibrant community, near Cyber City, perfectly located for work and life..",
         map:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15077.883075003392!2d72.8629156!3d19.1308596!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2c8a38409d307a53!2sCASA%20by%20Union%20Co-Living!5e0!3m2!1sen!2sin!4v1673692237980!5m2!1sen!2sin",
