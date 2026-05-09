@@ -47,7 +47,6 @@ function HeroSection() {
         { Attribute: 'mx_Monthly_Budget', Value: formData.budget },
         { Attribute: 'source', Value: 'Ruturaj Landing Page' },
         { Attribute: 'SearchBy', Value: 'Phone' },
-                 { Attribute: 'Ad Name' , Value: 'Facebook - landing page Launch Ad'},
 
       ]
 
